@@ -126,7 +126,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: background 0.3s ease-in-out;
-    text-decoration: wavy;
+    text-decoration: underline;
   }
   
   p a:hover {
