@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- <script src="https://unpkg.com/draggabilly@3/dist/draggabilly.pkgd.min.js"></script> -->
+    <script defer src="script.js"></script>
+    <title>Robert-Jan Schutte's Portfolio</title>
+</head>
+
+<body>
+    <!-- stars -->
+    <!-- <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="planet-shadow"></div> -->
+
+
+    <!-- cursor glow -->
+    <div class="cursor">
+        <div class="cursor-inner"></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            if (screen.width >= 768) {
+                $(document).mousemove(function (e) {
+                    $('.cursor').css({
+                        left: e.pageX - $('.cursor').outerWidth() / 1.1,
+                        top: e.clientY - $('.cursor').outerHeight() / 1.1
+                    });
+                });
+
+                $(window).scroll(function () {
+                    $('.cursor').css({
+                        top: $(window).scrollTop() + e.clientY - $('.cursor').outerHeight() / 2
+                    });
+                });
+            } else {
+                $('.cursor').css({
+                    display: 'none'
+                });
+            }
+        });
+
+
+    </script>
+
+    <header id="header">
+        <!-- Add your header content here -->
+        <p>RJ</p>
+    </header>
+
+    <nav id="navbar">
+        <!-- Add your navigation links here -->
+        <a href="#home">//Home</a>
+        <a href="#about-me">//About</a>
+        <a href="#portfolio">//Portfolio</a>
+        <a href="#contact-me">//Contact</a>
+    </nav>
+
+    <main>
+
+        <section id="home">
+            <!-- Add your introduction content here -->
+            <h2>Welcome to my portfolio page!</h2>
+            <p>My name is Robert-Jan Schutte and I'm a software developer with a passion for technology.</p>
+            <p>Here you can find information about my projects and skills.</p>
+            <p>"Empowering Bytes, Crafting Realities"</p> <p> – Embrace the essence of combining programming prowess and
+                creativity to shape the world around us.</p>
+        </section>
+
+        <section id="about-me">
+            <!-- Add your about me content here -->
+            <h2>About Me</h2>
+            <p>Hello and welcome to my digital abode! I'm Robert-Jan, a technology enthusiast with a diverse skill set
+                in programming, electronics, and design.</p>
+            <p>My journey in programming has led me to master languages like C, C++, Haskell, Java, JavaScript, Python,
+                CSS, and Assembly RISC, allowing me to develop innovative and efficient solutions across various
+                domains.</p>
+
+            <p>Not limited to just software, I have ventured into the world of hardware with experience in PCB design,
+                and have brought my creations to life through 3D printing. Additionally, I've delved into the
+                fascinating world of LoRa, harnessing its potential for long-range, low-power wireless communication.
+                Join me as I share my projects, knowledge, and insights in this ever-evolving digital landscape!</p>
+            <p>Feel free to <a href="#contact-me">contact</a> me if you have any questions or if you want to collaborate
+                on a project.</p>
+
+        </section>
+
+        <section id="portfolio">
+            <div class="card-container dragscroll">
+                <!-- Add your portfolio content here -->
+                <div class="card">
+                    <div class="image-container">
+                        <img src="Images/Zandvanger.png" alt="Projec 1">
+                      </div>
+                      
+                    <h3>Zandvangers</h3>
+                    <p>Measuring the movement</p> 
+                    <p>of sand in the dunes</p>
+                </div>
+
+                <div class="card">
+                    <div class="image-container">
+                        <img src="Images/gears.png" alt="Projec 2">
+                      </div>
+                    <h3>Project 2</h3>
+                    <p>A brief description of Project 2.</p>
+                </div>
+
+                <div class="card">
+                    <div class="image-container">
+                        <img src="Images/gears.png" alt="Projec 3">
+                      </div>
+                    <h3>Project 3</h3>
+                    <p>A brief description of Project 3.</p>
+                </div>
+
+                <div class="card">
+                    <div class="image-container">
+                        <img src="Images/gears.png" alt="Projec 4">
+                      </div>
+                    <h3>Project 4</h3>
+                    <p>A brief description of Project 3.</p>
+                </div>
+
+                <div class="card">
+                    <div class="image-container">
+                        <img src="Images/gears.png" alt="Projec 5">
+                      </div>
+                    <h3>Project 5</h3>
+                    <p>A brief description of Project 3.</p>
+                </div>
+
+                <div class="card">
+                    <div class="image-container">
+                        <img src="Images/gears.png" alt="Projec 6">
+                      </div>
+                    <h3>Project 6</h3>
+                    <p>A brief description of Project 3.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact-me">
+            <!-- Add your contact me content here -->
+            <h2>Contact Me</h2>
+            <p>Thank you for considering me for new opportunities! I'm eager to learn, grow, and contribute my skills to
+                a dynamic team. If you have any internships, job offers, or collaborative projects in mind, I'd love to
+                hear about them.</p>
+            <p>Please fill out the form below with your name, email, and a brief message detailing the opportunity.</p>
+            <p>I'll make sure to respond promptly, and I'm looking forward to exploring the potential of working
+                together!</p>
+        </section>
+
+        <section id="contact-form">
+            <h2>Contact Form:</h2>
+            <form id="contactForm" method="POST" action="send_email.php">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+
+        <section id="social-media">
+            <!-- Add your social media icons here -->
+            <div style="text-align: center;">
+            <a href="https://www.linkedin.com/in/robert-jan-schutte-47521a237/" class="fa fa-linkedin"
+                target="_blank"></a>
+            <a href="#" class="fa fa-twitter" target="_blank"></a>
+            <a href="https://github.com/HR-RJ" class="fa fa-github" target="_blank"></a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <!-- Add your footer content here -->
+        <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,403 @@
+/* General styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    line-height: 1.6;
+    background-color: black;
+    color: white;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* position: relative; */
+    /* overflow: hidden; */
+  }
+
+  main {
+    flex: 1;
+  }
+  
+  /* Navbar styles */
+  #navbar {
+    overflow: hidden;
+    background-color: #333;
+    display: block;
+    justify-content: space-between;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #navbar a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    transition: background-color 0.3s;
+
+  }
+  
+  #navbar a:hover {
+    
+    background-color: #555;
+    color: cyan;
+    border-radius: 15px
+  }
+  
+  /* Header and Footer styles + gradient*/
+  @keyframes gradient-wave {
+    0% {
+      background-position: 0% 50%;
+    }
+    25% {
+      background-position: 100% 50%;
+    }
+    50% {
+      background-position: 0% 50%;
+    }
+    75% {
+      background-position: -100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  header,
+  footer {
+    background: linear-gradient(-60deg, #1e3c72, #2a5298, #1e88e5, #0d47a1, #9c27b0, #1e3c72);
+    background-size: 300% 300%;
+    color: #fff;
+    text-align: center;
+    animation: gradient-wave 30s linear infinite;
+    text-decoration-color: white;
+  }
+  
+  /* Section styles */
+  section {
+    padding: 40px;
+  }
+  /* Text styles */
+  h2 {
+    background: linear-gradient(to right, #9B4F96, #BB6B9E, #D385A5, #E78128);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    position: relative;
+    display: inline-block;
+  }
+
+  h2::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 6px;
+    margin-left: 4px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    /* border-bottom: 2px solid; */
+    background: linear-gradient(to right, #9B4F96, #E78128);
+    animation: blink 5s infinite;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    
+    50% {
+      opacity: 1;
+    }
+    
+    100% {
+      opacity: 0;
+    }
+  }
+
+ p a {
+    color: #333;
+    background: linear-gradient(to right, #1E90FF, #00FFFF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background 0.3s ease-in-out;
+    text-decoration: wavy;
+  }
+  
+  p a:hover {
+    background-size: 100% 100px;
+  }
+  
+ p {
+    text-align: center;
+ }
+
+ /* Image container */
+ .image-container {
+    width: 300px; /* Adjust the width to your desired size */
+    height: 200px; /* Adjust the height to your desired size */
+    overflow: hidden;
+    position: relative;
+    background: gray;
+    border-radius: 15px;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+  
+
+/* Portfolio styles */
+#portfolio {
+    position: relative;
+    padding: 40px;
+  }
+  
+  .card-container {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    white-space: nowrap;
+    height: 400px; /* Adjust the height according to your needs */
+    cursor: grab;
+  }
+  
+  .card-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+  
+  
+  #portfolio .card {
+    flex: 0 0 300px;
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    background-color: black;
+    transition: transform 0.3s;
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+  }
+  
+  #portfolio .card img {
+    width: 100%;
+    height: 350;
+    margin-bottom: 15px;
+
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -ms-user-drag: none;
+    user-drag: none;
+  }
+
+  /* #portfolio .card p {
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 50%;
+    
+  } */
+  
+  .no-select {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+  }
+  
+  
+  
+  
+  /* Contact form styles */
+  #contact-form input,
+  #contact-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  #contact-form button {
+    display: block;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+  }
+  
+  /* Social media icon styles */
+  #social-media img {
+    width: 32px;
+    height: 32px;
+    margin: 5px;
+    cursor: pointer;
+  }
+
+  social-media {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    #navbar {
+      flex-direction: column;
+    }
+  }
+  
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+  /* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 70px;
+    height: 60px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 12px;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* LinkedIn */
+  .fa-linkedin {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa-github {
+    background: whitesmoke;
+    color: black;
+  }
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* star background */
+/* .stars {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 50%, transparent 50%);
+    background-size: 100% 2px;
+  }
+  
+  .stars:nth-child(2) {
+    width: 2px;
+    background-size: 100% 4px;
+    animation: move-stars 15s linear infinite;
+  }
+  
+  .stars:nth-child(3) {
+    width: 3px;
+    background-size: 100% 6px;
+    animation: move-stars 20s linear infinite;
+  }
+  
+  @keyframes move-stars {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  
+  .planet-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0.4) 30%, rgba(0, 0, 0, 0.2) 40%, transparent);
+  } */
+  
+
+/* Cursor glow */
+.cursor {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 128px;
+    height: 128px;
+    
+    pointer-events: none;
+    mix-blend-mode: difference;
+  }
+  
+  .cursor-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.2);
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.7);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+
+  nav, header, footer, .card-container, .card, #portfolio, .card-container::-webkit-scrollbar {
+    z-index: 9998;
+  }
+  
+  
